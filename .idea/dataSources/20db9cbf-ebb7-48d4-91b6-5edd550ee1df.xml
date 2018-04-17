@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sell@47.97.192.116">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="sell">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="qcl"/>
+    <schema id="7" parent="1" name="sys"/>
+    <table id="8" parent="2" name="hibernate_sequence"/>
+    <table id="9" parent="2" name="order_detail">
+      <Comment>订单详情表</Comment>
+    </table>
+    <table id="10" parent="2" name="order_master">
+      <Comment>订单表</Comment>
+    </table>
+    <table id="11" parent="2" name="product_category">
+      <Comment>类目表</Comment>
+    </table>
+    <table id="12" parent="2" name="product_info">
+      <Comment>商品表</Comment>
+    </table>
+    <table id="13" parent="2" name="pv2048"/>
+    <table id="14" parent="2" name="user"/>
+    <column id="15" parent="8" name="next_val">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="16" parent="9" name="detail_id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="9" name="order_id">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="9" name="product_id">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="9" name="product_name">
+      <Position>4</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="9" name="product_price">
+      <Position>5</Position>
+      <DataType>decimal(8,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="9" name="product_quantity">
+      <Position>6</Position>
+      <Comment>商品数量</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="9" name="product_icon">
+      <Position>7</Position>
+      <DataType>varchar(512)|0</DataType>
+    </column>
+    <column id="23" parent="9" name="create_time">
+      <Position>8</Position>
+      <Comment>创建时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="24" parent="9" name="update_time">
+      <Position>9</Position>
+      <Comment>修改时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="25" parent="9" name="idx_order_id">
+      <ColNames>order_id</ColNames>
+    </index>
+    <key id="26" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>detail_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="10" name="order_id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="10" name="buyer_name">
+      <Position>2</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="10" name="buyer_phone">
+      <Position>3</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="10" name="buyer_openid">
+      <Position>4</Position>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="10" name="order_amount">
+      <Position>5</Position>
+      <DataType>decimal(8,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="10" name="order_status">
+      <Position>6</Position>
+      <Comment>订单状态，默认0新下单</Comment>
+      <DataType>tinyint(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="33" parent="10" name="pay_status">
+      <Position>7</Position>
+      <Comment>支付状态，默认0未支付</Comment>
+      <DataType>tinyint(3)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="34" parent="10" name="create_time">
+      <Position>8</Position>
+      <Comment>创建时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="35" parent="10" name="update_time">
+      <Position>9</Position>
+      <Comment>修改时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="36" parent="10" name="buyer_adderss">
+      <Position>10</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="37" parent="10" name="idx_buyer_openid">
+      <ColNames>buyer_openid</ColNames>
+    </index>
+    <key id="38" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>order_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="11" name="category_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="40" parent="11" name="category_name">
+      <Position>2</Position>
+      <Comment>类目名字</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="11" name="category_type">
+      <Position>3</Position>
+      <Comment>类目编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="11" name="create_time">
+      <Position>4</Position>
+      <Comment>创建时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="43" parent="11" name="update_time">
+      <Position>5</Position>
+      <Comment>修改时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <index id="44" parent="11" name="uqe_category_type">
+      <ColNames>category_type</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="45" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>category_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="46" parent="11" name="uqe_category_type">
+      <ColNames>category_type</ColNames>
+      <UnderlyingIndexName>uqe_category_type</UnderlyingIndexName>
+    </key>
+    <column id="47" parent="12" name="product_id">
+      <Position>1</Position>
+      <DataType>varchar(32)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="12" name="product_name">
+      <Position>2</Position>
+      <Comment>商品名称</Comment>
+      <DataType>varchar(64)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="12" name="product_price">
+      <Position>3</Position>
+      <Comment>单价</Comment>
+      <DataType>decimal(8,2)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="12" name="product_stock">
+      <Position>4</Position>
+      <Comment>库存</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="12" name="product_description">
+      <Position>5</Position>
+      <Comment>描述</Comment>
+      <DataType>varchar(64)|0</DataType>
+    </column>
+    <column id="52" parent="12" name="product_icon">
+      <Position>6</Position>
+      <Comment>商品小图</Comment>
+      <DataType>varchar(512)|0</DataType>
+    </column>
+    <column id="53" parent="12" name="category_type">
+      <Position>7</Position>
+      <Comment>类目编号</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="12" name="create_time">
+      <Position>8</Position>
+      <Comment>创建时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="55" parent="12" name="update_time">
+      <Position>9</Position>
+      <Comment>修改时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="56" parent="12" name="product_type">
+      <Position>10</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="57" parent="12" name="product_status">
+      <Position>11</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="58" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>product_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="59" parent="13" name="pv_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="60" parent="13" name="pv_ip">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="61" parent="13" name="pathname">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="62" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pv_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="63" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="14" name="age">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="14" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="66" parent="14" name="user_name">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="67" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

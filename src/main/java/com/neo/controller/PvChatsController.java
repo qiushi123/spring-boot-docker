@@ -11,8 +11,11 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
+/**
+ * pv访问量和聊天室
+ */
 @Controller
-public class PVController {
+public class PvChatsController {
 
     @Resource
     IPService ipService;
@@ -34,5 +37,15 @@ public class PVController {
         List<Pv2048> pv2048s = ipService.getIPList();
         model.addAttribute("pvs", pv2048s);
         return "view_ip/list";
+    }
+
+    /**
+     * websocket聊天室
+     *
+     * @return
+     */
+    @RequestMapping("/chats")
+    public String list() {
+        return "websocket/chat";
     }
 }

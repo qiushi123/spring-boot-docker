@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8"/>
     <title>Hello Thymeleaf!</title>
+    <style type="text/css">
+        a{
+            color: #2b542c;
+            font-size: 35pt;
+            margin: 20pt;
+        }
+
+    </style>
 </head>
 <body>
-    <p th:text="'Hello, ' + ${name} + '!'" />
-    <a href="http://47.97.192.116:9999/pv">ip访问量</a>
-    <a href="http://47.97.192.116:9999/user">用户</a>
+<p th:text="'Hello, ' + ${name} + '!'"/>
+<a href="http://47.97.192.116:9999/pv">ip访问量</a>
+<a href="http://47.97.192.116:9999/user">用户</a>
+<a href="http://47.97.192.116:9999/chats">聊天室</a>
 </body>
 </html>

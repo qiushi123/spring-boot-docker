@@ -2,6 +2,8 @@ package com.neo.model;
 
 import org.hibernate.annotations.DynamicUpdate;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -15,7 +17,7 @@ import lombok.Data;
 @Entity
 @DynamicUpdate
 @Data//避免重复写get和set，tostring
-public class Pv2048 {
+public class Pv2048 implements Serializable {
     @Id
     @GeneratedValue
     private Long pvId;

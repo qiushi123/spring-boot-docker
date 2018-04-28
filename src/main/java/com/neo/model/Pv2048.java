@@ -24,4 +24,5 @@ public class Pv2048 implements Serializable {
 
     private String pathname;
     private String pvIp;
+    private String createTime;
 }

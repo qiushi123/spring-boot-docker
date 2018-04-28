@@ -16,13 +16,15 @@
             <th>#</th>
             <th>ip地址</th>
             <th>访问页面</th>
+            <th>时间</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="pv : ${pvs}">
             <th scope="row" th:text="${pv.pvId}">1</th>
-            <td th:text="${pv.pvIp}">neo</td>
-            <td th:text="${pv.pathname}">Otto</td>
+            <td th:text="${pv.pvIp}">ip</td>
+            <td th:text="${pv.pathname}">path</td>
+            <td th:text="${pv.createTime}">time</td>
         </tr>
         </tbody>
     </table>

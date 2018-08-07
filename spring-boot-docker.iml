@@ -115,5 +115,8 @@
     <orderEntry type="library" name="Maven: io.netty:netty-resolver:4.1.22.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-handler:4.1.22.Final" level="project" />
     <orderEntry type="library" name="Maven: io.netty:netty-codec:4.1.22.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.github.ulisesbocchio:jasypt-spring-boot-starter:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: com.github.ulisesbocchio:jasypt-spring-boot:2.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jasypt:jasypt:1.9.2" level="project" />
   </component>
 </module>
